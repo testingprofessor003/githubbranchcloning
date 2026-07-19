@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# Testing Professor
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive, graphical way to learn Git **branching and merging** — an animated commit graph you drive with real git commands, built around a focused set of levels instead of trying to cover all of Git.
 
-Currently, two official plugins are available:
+**🔗 Live demo: https://testingprofessor003.github.io/githubbranchcloning/**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Testing Professor](src/assets/logo.png)
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Animated commit graph** — commits, branches, and `HEAD` are rendered as an SVG graph that smoothly animates as you run commands (powered by a small deterministic git engine + framer-motion)
+- **A real command console** — type actual git commands (`git branch`, `git checkout -b`, `git merge`, `git rebase`, `git reset`, `git log`, …) or use the quick-action toolbar
+- **6 progressive levels** — commits & the graph → branching → fast-forward merge → true (diamond-shaped) merge commit → parallel feature branches → rebase vs. merge, each with an explanation, hints, and automatic goal detection
+- **Sandbox mode** — no goals, just a graph to experiment freely on
+- **Save / load workflows** — name and save your current command history for any level (or sandbox) and reload it later to pick up where you left off
 
-## Expanding the Oxlint configuration
+## Running locally
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Then open the printed local URL in your browser.
+
+## Tech stack
+
+React + TypeScript + Vite, with a hand-written git simulation engine (`src/git/`) and an SVG graph layout/animation layer (`src/layout/`, `src/components/GitGraph.tsx`).
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the app and publishes it to GitHub Pages.
