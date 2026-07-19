@@ -1,0 +1,71 @@
+.git-graph-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: radial-gradient(circle at 20% 0%, #1b2030 0%, #12151f 60%);
+  border-radius: 12px;
+}
+
+.git-graph-svg {
+  display: block;
+  min-width: 100%;
+}
+
+.graph-edge {
+  stroke: #4b5468;
+  stroke-width: 3;
+  fill: none;
+}
+
+.commit-circle {
+  stroke: #0c0e14;
+  stroke-width: 3;
+}
+
+.commit-circle.commit-current {
+  stroke: #ffffff;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.55));
+}
+
+.commit-circle.commit-merge {
+  stroke-dasharray: 4 2;
+}
+
+.commit-id {
+  fill: #0c0e14;
+  font: 700 12px 'JetBrains Mono', ui-monospace, monospace;
+  pointer-events: none;
+  user-select: none;
+}
+
+.branch-badge {
+  fill: #262c3d;
+  stroke: #454e68;
+  stroke-width: 1.5;
+}
+
+.branch-badge-current {
+  fill: #3457d5;
+  stroke: #7fa1ff;
+}
+
+.branch-badge-text {
+  fill: #e8ecf7;
+  font: 600 12px ui-monospace, monospace;
+  pointer-events: none;
+  user-select: none;
+}
+
+.head-badge {
+  fill: #f7c948;
+  stroke: #a9791a;
+  stroke-width: 1.5;
+}
+
+.head-badge-text {
+  fill: #1b1503;
+  font: 700 11px ui-monospace, monospace;
+  pointer-events: none;
+  user-select: none;
+}

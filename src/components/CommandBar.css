@@ -1,0 +1,73 @@
+.command-bar {
+  display: flex;
+  flex-direction: column;
+  background: #0c0e14;
+  border-radius: 12px;
+  border: 1px solid #262c3d;
+  overflow: hidden;
+  height: 100%;
+}
+
+.command-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 12px;
+  font: 13px ui-monospace, 'JetBrains Mono', monospace;
+  color: #c6cbdb;
+}
+
+.command-entry {
+  margin-bottom: 8px;
+}
+
+.command-entry-input {
+  color: #7fe9ff;
+}
+
+.command-entry-output {
+  color: #9aa4bf;
+  white-space: pre-wrap;
+  padding-left: 14px;
+}
+
+.command-entry-output.error {
+  color: #ff8080;
+}
+
+.prompt-glyph {
+  color: #4ecb71;
+  font-weight: 700;
+}
+
+.command-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid #262c3d;
+  background: #10131c;
+}
+
+.command-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f1f3fb;
+  font: 13px ui-monospace, 'JetBrains Mono', monospace;
+}
+
+.command-run-btn {
+  background: #3457d5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.command-run-btn:hover {
+  background: #4568ea;
+}

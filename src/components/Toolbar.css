@@ -1,0 +1,27 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.toolbar button {
+  background: #1d2233;
+  border: 1px solid #333c56;
+  color: #cfd6ea;
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toolbar button:hover:not(:disabled) {
+  background: #262d45;
+  border-color: #46527a;
+}
+
+.toolbar button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

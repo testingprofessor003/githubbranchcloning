@@ -1,0 +1,57 @@
+.app-shell {
+  display: flex;
+  gap: 16px;
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.app-sidebar {
+  width: 340px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  min-width: 0;
+  height: 100%;
+}
+
+.graph-pane {
+  flex: 1.4;
+  min-width: 0;
+  height: 100%;
+}
+
+.console-pane {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+  .app-sidebar {
+    width: 100%;
+    height: auto;
+  }
+  .app-main {
+    flex-direction: column;
+    height: auto;
+  }
+  .graph-pane,
+  .console-pane {
+    height: 480px;
+    max-width: none;
+  }
+}
